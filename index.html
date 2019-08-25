@@ -1,0 +1,416 @@
+﻿<html lang="fr">
+
+<head>
+    <meta charset="utf-8">
+    <title>Matthieu MOISSON : CV intéractif</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Site regroupant les différentes configurations des ordinateurs en fonction de ses besoins." />
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- <link href="css/bootstrap.min.css" rel="stylesheet"> -->
+    <link href="css/style.css" rel="stylesheet">
+    <!--<script src="js/jquery-3.0.0.min.js"></script>-->
+    <script type='text/javascript'>
+        $(document).ready(function() {
+            $("#emplois").hide(1000);
+            $("#projets").hide(1000);
+            $("#stages").show(1000);
+            $("#lang").hide(1000);
+            $("#outil").hide(1000);
+            $("#fram").hide(1000);
+            $("#ide").hide(1000);
+            $("#sgbd").hide(1000);
+            $("#languages").hide(1000);
+            $("#prog").hide(1000);
+            $("#meca").hide(1000);
+            $("#elec").hide(1000);
+            $("#autom").hide(1000);
+            $("#autre").hide(1000);
+            $("#bouton_stages").addClass("encours");
+            $("#bouton_intro").addClass("encours");
+            $('html, body').animate({
+                scrollTop: $("#presentation").offset().top
+            }, 1000);
+        });
+
+        function scrollbouton(bouton) {
+            $('html, body').animate({
+                scrollTop: $('#' + bouton).offset().top
+            }, 1000);
+            $("#bouton_intro").removeClass("encours");
+            $("#bouton_monparcours").removeClass("encours");
+            $("#bouton_experience").removeClass("encours");
+            $("#bouton_mesconnaissances").removeClass("encours");
+            $("#bouton_interet").removeClass("encours");
+            if (bouton == "presentation") {
+                $("#bouton_intro").addClass("encours");
+            }
+            if (bouton == "monparcours") {
+                $("#bouton_monparcours").addClass("encours");
+            }
+            if (bouton == "experience") {
+                $("#bouton_experience").addClass("encours");
+            }
+            if (bouton == "mesconnaissances") {
+                $("#bouton_mesconnaissances").addClass("encours");
+            }
+            if (bouton == "interet") {
+                $("#bouton_interet").addClass("encours");
+            }
+        }
+
+        function experience(bouton) {
+            $("#stages").hide(1000);
+            $("#bouton_stages").removeClass("encours");
+            $("#projets").hide(1000);
+            $("#bouton_projets").removeClass("encours");
+            $("#emplois").hide(1000);
+            $("#bouton_emplois").removeClass("encours");
+            $("#" + bouton).show(1000);
+            $("#bouton_" + bouton).addClass("encours");
+        }
+
+        function mesconnaissances(bouton) {
+            $("#prog").hide(1000);
+            $("#meca").hide(1000);
+            $("#elec").hide(1000);
+            $("#autom").hide(1000);
+            $("#autre").hide(1000);
+            $("#lang").hide(1000);
+            $("#outil").hide(1000);
+            $("#fram").hide(1000);
+            $("#ide").hide(1000);
+            $("#sgbd").hide(1000);
+            $("#languages").hide(1000);
+            $("#" + bouton).toggle(1000);
+        }
+        $(window).scroll(function() {
+            $("#bouton_intro").removeClass("encours");
+            $("#bouton_monparcours").removeClass("encours");
+            $("#bouton_experience").removeClass("encours");
+            $("#bouton_mesconnaissances").removeClass("encours");
+            $("#bouton_interet").removeClass("encours");
+            var scrollPos = $(document).scrollTop();
+            var activediv = $(this);
+            if (activediv.position().top <= scrollPos) {
+                $("#bouton_" + activediv).addClass("encours");
+            }
+        });
+    </script>
+</head>
+
+<body>
+    <div class="intro">
+        
+        <div class="contenu" id="presentation">
+            <h1 class="c_pres">Blog</h1>
+            <img src="img/nous.jpg" class="img-circle image" alt="Ma photo" width="90%" style="padding-top:2%;padding-bottom:2%">
+            <p class="">Bienvenue sur le site de notre mariage !</p>
+            <p class="">Pour les apprenties sorcies, c'est très simple : en naviguant sur les différentes rubriques de notre espace, vous découvrirez tout ce qu'il faut savoir sur notre jour j.</p>
+            <p class="">Nous comptons aussi sur vous pour apporter votre pierre à l'édifice en postant des petits commentaires dont vous avez le secret.</p>
+            <p class="">Bonne balade :-) !</p>
+        </div>
+    </div>
+    <!-------------------------------------------------------------------------------------
+         ------------------------------- Présentation général mes études -------------------------------
+         -------------------------------------------------------------------------------------->
+    <div class="parcours">
+        <div class="contenu" id="monparcours">
+            <h1 class="c_parc">Présentation général</h1>
+            
+        </div>
+    </div>
+    <div class="experience">
+        <div class="contenu" id="experience">
+            <h1 class="c_exp">Activitées</h1>
+            <div class="row">
+                <div class="col-xs-4">
+                    <a href="javascript:experience('stages')" class="col-sm-4 bouton_exp" id="bouton_stages">
+						Détentes
+					</a>
+                </div>
+                <div class="col-xs-4">
+                    <a href="javascript:experience('emplois')" class="col-sm-4 bouton_exp" id="bouton_emplois">
+						Sportif
+					</a>
+                </div>
+                <div class="col-xs-4">
+                    <a href="javascript:experience('projets')" class="col-sm-4 bouton_exp" id="bouton_projets">
+						Sensation
+					</a>
+                </div>
+            </div>
+            <div class="contenu_exp" id="stages">
+                <h2 class="c_exp">Centre aquatique</h2>
+                <a href="http://www.les7laux.com/fr/il4-equipement_i209393-espace-aquatique-des-7-laux.aspx"><b style="color:#FEA100;">Pour ceux qui aime profiter de l'eau malgré des température montagnard !</b></a>
+                <p>
+                    Le Centre Aquatique des 7 Laux vous propose un espace de jeux aménagés avec toboggans, rivière à bouées, piscine, solarium, snack, bar. Maillot de bain obligatoire (pas de short de bain)
+                </p>
+                <h2 class="c_exp">Espace bien-être</h2>
+                <a href="https://www.bedinaspa.com"><b style="color:#FEA100;">Offrez vous un instant unique de bien-être...</b></a>
+                <p>
+                    Nous vous invitons à voyager au cœur des cultures ancestrales de beauté. Nous avons sélectionné pour vous des onguents issus des traditions millénaires,  dont l’extrême sensorialité plonge votre corps et votre esprit dans des bains de nature pour leur apporter un bien-être universel.
+                </p>
+                <p>
+                    Laissez-vous tenter par les odeurs exotiques des Iles,
+                </p>
+                <p>    
+                    Ressentez à fleur de peau les senteurs miellées, fruitées et épicées de l’Orient, Découvrez les traditionnels rituels spa à l’Indonésienne, Succombez au raffinement des soins à la Japonaise…
+                </p>
+                <p>
+                    Laissez-vous guider par vos sens…
+                </p>
+                <p>
+                    Situé au cœur de la station des 7 Laux sur le versant de Prapoutel, le Bedina Spa vous accueille tout l'hiver dans une ambiance chaleureuse.
+                </p>
+            </div>
+            <div class="contenu_exp" id="emplois">
+                <h2 class="c_exp">Devalkart</h2>
+                <a href="http://www.les7laux.com/fr/il4-activite_i5302606-devalkart.aspx"><b style="color:#FEA100;">Un concept original conçu pour votre plus grand plaisir. </b></a>
+                <p>
+                    Une attraction incontournable sur herbe, neige et piste synthétique. 
+                </p>
+                <p>
+                    Destiné à un large public de 10 à 88 ans, intelligent le Dévalkart utilise les infrastructures des remontées mécaniques existantes : téléski, télésiège, télécabine et tapis ; il comblera les amateurs de sensations nature. Compact et silencieux, d’utilisation simple et d’un maniement aisé, il répond aux normes CE. 
+                </p>
+
+                <h2 class="c_exp">WizLuge</h2>
+                <a href="http://www.les7laux.com/fr/il4-activite_i4975416-wizluge.aspx"><b style="color:#FEA100;">"WizLuge" pour toutes personnes ayant envie de sensation !!! </b></a>
+                <p>
+                    Venez dévaler vitesse grand V, en famille, entre amis .... la piste de luge sur rail, virages, pont, tunnel et vrilles 
+                </p>
+                <p>
+                    Sécurité optimale : ceintures de sécurité, système anti-déraillement, freinage au choix, anti-tamponnage à l'approche d'une autre luge
+                </p>
+
+                <h2 class="c_exp">Parapente</h2>
+                <a href="http://www.les7laux.com/fr/il4-activite_i758356-air-bulle-vol-en-parapente.aspx"><b style="color:#FEA100;">Philips moisson pourra vous conseiller !</b></a>
+                <p>
+                    Stages, encadrement à la journée ou sur plusieurs jours en hiver. 
+                </p>
+                <p>
+                    Magasin et école de parapente à Lumbin, à l'atterrissage de la coupe Icare. 
+                </p>
+                <p>
+                    Vols sur le site de la coupe Icare ou à Prapoutel !
+                </p>
+            </div>
+            <div class="contenu_exp" id="projets">
+                    <h2 class="c_exp">Randonnées</h2>
+                    <a href="https://www.visorando.com/randonnee-refuge-des-7-laux.html"><b style="color:#FEA100;">Randonnée pour tous niveaux</b></a>
+                    <p>
+                        Le gite est au coeur de belledonne, au pied des randonnées. Pour toutes informations sur les randonnées n'hésité pas à vous rendre sur la page <a href="https://www.visorando.com/randonnee-refuge-des-7-laux.html">suivante</a>, ou à nous contacter!
+                    </p>
+
+                    <h2 class="c_exp">Escalade</h2>
+                    <a href="http://www.les7laux.com/fr/il4-activite_i4702185-husky-sensations.aspx"><b style="color:#FEA100;">Escalade</b></a>
+                    <p>
+                            Rocher : Gneiss orange et gris 
+                    </p>
+                    <p>
+                        Nombre de voies : 40 
+                    </p>
+                    <p>
+                        Hauteur minimale des voies : 4 M 
+                    </p>
+                    <p>
+                        Hauteur maximale des voies : 40 M 
+                    </p>
+                    <p>
+                        Niveau de pratique : cotations de 3a à 8a 
+                    </p>
+                    <p>
+                        Style d’escalade : Fissures - surplombs - dalles - nombreuses réglettes 
+                    </p>
+                    <p>
+                        Equipement : spits de 10 très récents 
+                    </p>
+
+                    <h2 class="c_exp">VTT</h2>
+                    <a href="http://www.les7laux.com/fr/il4-activite_i856108-vtt-electrique.aspx"><b style="color:#FEA100;">VTT, Vélo de route faites votre choix !!!</b></a>
+                    <p>
+                        Pour les personnes voulant faire du VTT, il faudra faire chauffer les muscles, les remontées ne sont pas ouvertes à cette époque de l'année.
+                    </p>
+                    <p>
+                        Pour les personnes voulant faire du vélo de route, idem pour les jambes !!
+                    </p>
+            </div>
+            <div class="row" style="margin-bottom:30px;">
+            </div>
+        </div>
+    </div>
+    <div class="connaissance">
+        <div class="contenu" id="mesconnaissances">
+            <h1 class="c_connaissance">Liste des invitées (non exaustive)</h1>
+            <div class="col-xs-4">
+                <div class="row" style="margin-bottom:10px;">
+                    <a href="javascript:mesconnaissances('marie')">
+                        <h2 class="c_famille"><span class="glyphicon glyphicon-hand-right" style="text-align:center;"></span>Les mariées</h2>
+                    </a>
+                    <p>
+                        <div id="marie">
+                            <li>Matthieu & Mélanie</li>
+                        </div>
+                    </p>
+                </div>
+                <div class="row" style="margin-bottom:10px;">
+                    <a href="javascript:mesconnaissances('desile')">
+                        <h2 class="c_famille"><span class="glyphicon glyphicon-hand-right" style="text-align:center;"></span>Désile</h2>
+                    </a>
+                    <p>
+                        <div id="desile">
+                            <li>Marie Laure & Laurent</li>
+                            <li>Charline</li>
+                            <li>Amélie</li>
+                        </div>
+                    </p>
+                </div>
+                <div class="row" style="margin-bottom:10px;">
+                    <a href="javascript:mesconnaissances('desile')">
+                        <h2 class="c_famille"><span class="glyphicon glyphicon-hand-right" style="text-align:center;"></span>Mescam</h2>
+                    </a>
+                    <p>
+                        <div id="desile">
+                            <li>Christine & Jean Cristophe</li>
+                            <li>Pierre & </li>
+                            <li>Tangui & </li>
+                        </div>
+                    </p>
+                </div>
+            </div>
+            <div class="col-xs-4">
+                <div class="row" style="margin-bottom:10px;">
+                    <a href="javascript:mesconnaissances('moisson')">
+                        <h2 class="c_famille"><span class="glyphicon glyphicon-hand-right" style="text-align:center;"></span>Famille MOISSON</h2>
+                    </a>
+                    <p>
+                        <div id="moisson">
+                            <li>Matthieu</li>
+                            <li>Aurélien & Alexandre</li>
+                            <li>Nicolas & Sophie</li>
+                            <li>Claire & Nicolas & Alice</li>
+                            <li>Philips & Marie-Christine</li>
+                            <li>François</li>
+                            <li>Eric & Nathalie</li>
+                            <li>Vincent</li>
+                            <li>Marie</li>
+                            <li>Delphine</li>
+                            <li>Jean Luc & Christel</li>
+                            <li>Caroline & Naike</li>
+                        </div>
+                    </p>
+                </div>
+                <div class="row" style="margin-bottom:10px;">
+                    <a href="javascript:mesconnaissances('amand')">
+                        <h2 class="c_famille"><span class="glyphicon glyphicon-hand-right" style="text-align:center;"></span>Amand</h2>
+                    </a>
+                    <p>
+                        <div id="amand">
+                            <li>Valentin</li>
+                            <li>Xavier</li>
+                        </div>
+                    </p>
+                </div>
+                <div class="row" style="margin-bottom:10px;">
+                    <a href="javascript:mesconnaissances('mazet')">
+                        <h2 class="c_famille"><span class="glyphicon glyphicon-hand-right" style="text-align:center;"></span>Mazet</h2>
+                    </a>
+                    <p>
+                        <div id="mazet">
+                            <li>Serge & Cathy</li>
+                            <li>Jessica</li>
+                            <li>Noemie</li>
+                        </div>
+                    </p>
+                </div>
+            </div>
+            <div class="col-xs-4">
+                
+                <div class="row" style="margin-bottom:10px;">
+                    <a href="javascript:mesconnaissances('gauter')">
+                        <h2 class="c_famille"><span class="glyphicon glyphicon-hand-right" style="text-align:center;"></span>GAUTIER</h2>
+                    </a>
+                    <p>
+                        <div id="gauter">
+                            <li>Christian & Catherine</li>
+                            <li>Irene</li>
+                        </div>
+                    </p>
+                </div>
+                <div class="row" style="margin-bottom:10px;">
+                    <a href="javascript:mesconnaissances('coreilla')">
+                        <h2 class="c_famille"><span class="glyphicon glyphicon-hand-right" style="text-align:center;"></span>Coreilla</h2>
+                    </a>
+                    <p>
+                        <div id="coreilla">
+                            <li>Isabelle & François</li>
+                            <li>Anais</li>
+                            <li>Sebastien</li>
+                        </div>
+                    </p>
+                </div>
+                <div class="row" style="margin-bottom:10px;">
+                    <a href="javascript:mesconnaissances('rousseau')">
+                        <h2 class="c_famille"><span class="glyphicon glyphicon-hand-right" style="text-align:center;"></span>Rousseau</h2>
+                    </a>
+                    <p>
+                        <div id="rousseau">
+                            <li>Michelle & Paulette</li>
+                        </div>
+                    </p>
+                </div>
+            </div>
+        </div>
+	</div>
+
+    <div class="interet">
+        <div class="contenu" id="interet">
+            <h1 class="c_interet">Blog</h1>
+            <div class="row">
+                <div class="col-sm-6 col-md-6">
+                    <div class="thumbnail">
+                        <img src="img/moi.jpg" alt="Moi" width="200px">
+                        <div class="caption">
+                            <h2 class="c_interet">Les aliances</h2>
+                            <p>
+                                On attend les soldes, et que le taux de l'or diminue ;)
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-6">
+                    <div class="thumbnail">
+                        <img src="img/livre.jpg" alt="Moi" width="200px">
+                        <div class="caption">
+                            <h2 class="c_interet">La robes</h2>
+                            <p>
+                                Pour ceux qui veulent tenter leur chance vous pouvez toujours demander à la marié, cependant je pense que comme le marié il faudra attendre le mariage
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-6">
+                    <div class="thumbnail">
+                        <img src="img/meetup.PNG" alt="Moi" width="200px">
+                        <div class="caption">
+                            <h2 class="c_interet">La demande</h2>
+                            <p>
+                                
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+	</div>
+    <div id="menu">
+        <a href="javascript:scrollbouton('presentation')" class="bouton_intro" id="bouton_intro">Accueil</a>
+        <a href="javascript:scrollbouton('monparcours')" class="bouton_monparcours" id="bouton_monparcours">Présentation général</a>
+        <a href="javascript:scrollbouton('experience')" class="bouton_experience" id="bouton_experience">Activitées</a>
+        <a href="javascript:scrollbouton('mesconnaissances')" class="bouton_mesconnaissances" id="bouton_mesconnaissances">Organisation</a>
+        <a href="javascript:scrollbouton('interet')" class="bouton_interet" id="bouton_interet">Blog</a>
+    </div>
+</body>
+
+</html>

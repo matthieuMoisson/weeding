@@ -1,0 +1,546 @@
+body
+{
+  margin:0;
+  padding:0;
+  background-color:White;
+  font-family: Calibri, sans-serif;
+}
+a,a:hover,a:link,a:visited,a:active
+{
+	text-decoration: none;
+}
+p
+{
+	font-size:150%;
+	color:black;
+}
+h1
+{
+	color:grey;
+	text-align: left;
+	font-family: Segoe UI, sans-serif;
+	font-size: 150%;
+	margin-bottom:4%;
+	padding-bottom: 1%;
+	border-bottom: solid 1px grey;
+	margin: 0px;
+	
+}
+h2
+{
+	color:black;
+	text-align: left;
+	font-family: Segoe UI, sans-serif;
+	font-size: 100%;
+	text-decoration: none;
+}
+span
+{
+	margin-right:30px;
+}
+li
+{
+	padding-bottom:10px;
+	text-indent:5%;
+}
+
+.introduction{
+	line-height:200%;
+	color:White;
+}
+
+.c_pres
+{
+	color:black;
+	border-color :black;
+	text-align: center;
+	font-size: 40px;
+	font-weight: bold;
+}
+.c_parc
+{
+	color:#116493;
+	border-color :#116493;
+	text-align: center;
+	font-size: 40px;
+	font-weight: bold;
+}
+.c_exp
+{
+	color:#D7781A;
+	border-color :#FEA100;
+	text-align: center;
+	font-size: 40px;
+	font-weight: bold;
+}
+.c_connaissance
+{
+	color:#CC052E;
+	border-color :#FF073A;
+	text-align: center;
+	font-size: 40px;
+	font-weight: bold;
+}
+.c_famille{
+	color:#CC052E;
+	border-color :#FF073A;
+	font-weight: bold;
+}
+.c_interet
+{
+	color:#519500;
+	border-color :#519500;
+	text-align: center;
+	font-size: 40px;
+	font-weight: bold;
+}
+.intro
+{
+  background: url(../img/maison.png) no-repeat center fixed;
+  -webkit-background-size: cover; /* pour anciens Chrome et Safari */
+  background-size: cover; /* version standardisÃ©e */
+  min-height:100%;
+  width:100%;
+  height:1080px;
+}
+.interet
+{
+  background: url(../img/poudlard_1_.png) no-repeat center fixed;
+  -webkit-background-size: cover; /* pour anciens Chrome et Safari */
+  background-size: cover; /* version standardisÃ©e */
+  margin-top:0;
+  min-height:100%;
+  width:100%;
+  height:1080px;
+}
+.connaissance
+{
+  background: url(../img/Poudlard_sous_la_neige.jpg) no-repeat center fixed;
+  -webkit-background-size: cover; /* pour anciens Chrome et Safari */
+  background-size: cover; /* version standardisÃ©e */
+  margin-top:0;
+  min-height:100%;
+  width:100%;
+  height:1080px;
+}
+.parcours
+{
+  background: url(../img/lune.png) no-repeat center fixed;
+  -webkit-background-size: cover; /* pour anciens Chrome et Safari */
+  background-size: cover; /* version standardisÃ©e */
+  margin-top:0;
+  min-height:100%;
+  width:100%;
+  height:1080px;
+}
+.experience
+{
+  background: url(../img/trio.jpg) no-repeat center fixed;
+  -webkit-background-size: cover; /* pour anciens Chrome et Safari */
+  background-size: cover; /* version standardisÃ©e */
+  margin-top:0;
+  min-height:100%;
+  width:100%;
+  height:1080px;
+}
+
+.contenu_intro
+{
+	/* padding-top:2%; */
+	margin-left:10%;
+	/* padding-bottom:5%; */
+	min-height:50%;
+	width:50%;
+	background-color: white;
+}
+
+.contenu
+{
+	padding-top:2%;
+	margin-left:10%;
+	/* padding-bottom:5%; */
+	height:100%;
+	width:50%;
+	background-color: white;
+}
+.contenu_exp
+{
+	padding:2%;
+}
+.image
+{
+	text-align:center;
+	display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom:20px;
+}
+.bouton_exp,.bouton_exp:visited,.bouton_exp:link
+{
+	display:inline-block;
+	background-color:#FEA100;
+	padding-top:2%;
+	padding-bottom:2%;
+	width:100%;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+	text-align: center;
+	color:white;
+	font-family: Segoe UI, sans-serif;
+	font-size:120%;
+	border-bottom:5px solid #D7781A;
+	text-decoration: none;
+	transition: background 0.5s;
+	margin-top:10px;
+	margin-bottom:10px;
+}
+.bouton_exp:hover,.bouton_exp:active,.bouton_exp:focus,.bouton_exp.encours
+{
+	background-color:white;
+	display:inline-block;
+	color:#FEA100;
+	text-decoration: none;
+}
+@media screen and (min-width: 1280px){
+.bouton_intro,.bouton_intro:visited,.bouton_intro:link
+{
+	padding:20px;
+	background-color:rgba(24,28,27,1);
+	position : fixed;
+	bottom:0px;
+	left:50px;
+	width:200px;
+	display:inline-block;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+	text-align: center;
+	color:white;
+	font-family: Segoe UI, sans-serif;
+	font-size:120%;
+	border-top:10px solid black;
+	text-decoration: none;
+	transition: background 0.5s;
+}
+.bouton_intro:hover,.bouton_intro:active,.bouton_intro:focus,.bouton_intro.encours
+{
+	background-color:white;
+	display:inline-block;
+	color:rgba(24,28,27,1);
+	text-decoration: none;
+}
+.bouton_monparcours,.bouton_monparcours:visited,.bouton_monparcours:link
+{
+	padding:20px;
+	background-color:#116493;
+	position : fixed;
+	bottom:0px;
+	left:300px;
+	width:200px;
+	display:inline-block;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+	text-align: center;
+	color:white;
+	font-family: Segoe UI, sans-serif;
+	font-size:120%;
+	border-top:10px solid #06283a;
+	text-decoration: none;
+	transition: background 0.5s;
+}
+.bouton_monparcours:hover,.bouton_monparcours:active,.bouton_monparcours:focus,.bouton_monparcours.encours
+{
+	background-color:white;
+	display:inline-block;
+	color:#116493;
+	text-decoration: none;
+}
+.bouton_experience,.bouton_experience:visited,.bouton_experience:link
+{
+	padding:20px;
+	background-color:#FEA100;
+	position : fixed;
+	bottom:0px;
+	left:550px;
+	width:200px;
+	display:inline-block;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+	text-align: center;
+	color:white;
+	font-family: Segoe UI, sans-serif;
+	font-size:120%;
+	border-top:10px solid #D7781A;
+	text-decoration: none;
+	transition: background 0.5s;
+}
+
+.bouton_experience:hover,.bouton_experience:active,.bouton_experience:focus,.bouton_experience.encours
+{
+	background-color:white;
+	display:inline-block;
+	color:#FEA100;
+	text-decoration: none;
+}
+
+.bouton_mesconnaissances,.bouton_mesconnaissances:visited,.bouton_mesconnaissances:link
+{
+	padding:20px;
+	background-color:#FF073A;
+	position : fixed;
+	bottom:0px;
+	left:800px;
+	width:250px;
+	display:inline-block;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+	text-align: center;
+	color:white;
+	font-family: Segoe UI, sans-serif;
+	font-size:120%;
+	border-top:10px solid #CC052E;
+	text-decoration: none;
+	transition: background 0.5s;
+}
+.bouton_mesconnaissances:hover,.bouton_mesconnaissances:active,.bouton_mesconnaissances:focus,.bouton_mesconnaissances.encours
+{
+	background-color:white;
+	display:inline-block;
+	color:#FF073A;
+	text-decoration: none;
+}
+.bouton_interet,.bouton_interet:visited,.bouton_interet:link
+{
+	padding:20px;
+	background-color:#74D600;
+	position : fixed;
+	bottom:0px;
+	left:1100px;
+	width:200px;
+	display:inline-block;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+	text-align: center;
+	color:white;
+	font-family: Segoe UI, sans-serif;
+	font-size:120%;
+	border-top:10px solid #519500;
+	text-decoration: none;
+	transition: background 0.5s;
+}
+.bouton_interet:hover,.bouton_interet:active,.bouton_interet:focus,.bouton_interet.encours
+{
+	background-color:white;
+	display:inline-block;
+	color:#74D600;
+	text-decoration: none;
+}
+}
+@media screen and (min-width: 760px) and (max-width: 1280px){
+.bouton_intro,.bouton_intro:visited,.bouton_intro:link
+{
+	padding:10px;
+	background-color:rgba(24,28,27,1);
+	position : fixed;
+	bottom:0px;
+	left:20px;
+	width:120px;
+	display:inline-block;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+	text-align: center;
+	color:white;
+	font-family: Segoe UI, sans-serif;
+	font-size:90%;
+	border-top:10px solid black;
+	text-decoration: none;
+	transition: background 0.5s;
+}
+.bouton_monparcours,.bouton_monparcours:visited,.bouton_monparcours:link
+{
+	padding:10px;
+	background-color:#116493;
+	position : fixed;
+	bottom:0px;
+	left:160px;
+	width:150px;
+	display:inline-block;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+	text-align: center;
+	color:white;
+	font-family: Segoe UI, sans-serif;
+	font-size:90%;
+	border-top:10px solid #06283a;
+	text-decoration: none;
+	transition: background 0.5s;
+}
+.bouton_experience,.bouton_experience:visited,.bouton_experience:link
+{
+	padding:10px;
+	background-color:#FEA100;
+	position : fixed;
+	bottom:0px;
+	left:330px;
+	width:150px;
+	display:inline-block;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+	text-align: center;
+	color:white;
+	font-family: Segoe UI, sans-serif;
+	font-size:90%;
+	border-top:10px solid #D7781A;
+	text-decoration: none;
+	transition: background 0.5s;
+}
+.bouton_mesconnaissances,.bouton_mesconnaissances:visited,.bouton_mesconnaissances:link
+{
+	padding:10px;
+	background-color:#FF073A;
+	position : fixed;
+	bottom:0px;
+	left:500px;
+	width:150px;
+	display:inline-block;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+	text-align: center;
+	color:white;
+	font-family: Segoe UI, sans-serif;
+	font-size:90%;
+	border-top:10px solid #CC052E;
+	text-decoration: none;
+	transition: background 0.5s;
+}
+.bouton_interet,.bouton_interet:visited,.bouton_interet:link
+{
+	padding:10px;
+	background-color:#74D600;
+	position : fixed;
+	bottom:0px;
+	left:670px;
+	width:150px;
+	display:inline-block;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+	text-align: center;
+	color:white;
+	font-family: Segoe UI, sans-serif;
+	font-size:90%;
+	border-top:10px solid #519500;
+	text-decoration: none;
+	transition: background 0.5s;
+}
+.bouton_intro:hover,.bouton_intro:active,.bouton_intro:focus
+{
+	background-color:white;
+	display:inline-block;
+	color:rgba(24,28,27,1);
+	text-decoration: none;
+}
+.bouton_monparcours:hover,.bouton_monparcours:active,.bouton_monparcours:focus
+{
+	background-color:white;
+	display:inline-block;
+	color:#116493;
+	text-decoration: none;
+}
+.bouton_experience:hover,.bouton_experience:active,.bouton_experience:focus
+{
+	background-color:white;
+	display:inline-block;
+	color:#FEA100;
+	text-decoration: none;
+}
+.bouton_mesconnaissances:hover,.bouton_mesconnaissances:active,.bouton_mesconnaissances:focus
+{
+	background-color:white;
+	display:inline-block;
+	color:#FF073A;
+	text-decoration: none;
+}
+.bouton_interet:hover,.bouton_interet:active,.bouton_interet:focus
+{
+	background-color:white;
+	display:inline-block;
+	color:#74D600;
+	text-decoration: none;
+}
+}
+@media screen and (max-width: 759px){
+.contenu
+{
+	margin-left:5%;
+	width:90%;
+	padding-top: 5%;
+	padding-bottom: 5%;
+	background-color: rgba(255,255,255,0.6);
+}
+.bouton_intro,.bouton_intro:visited,.bouton_intro:link
+{
+	position:fixed;
+	top:12.5%;
+	background-color:rgba(0,0,0,0.2);
+	right:5%;
+	width:15px;
+	height:15px;
+	border-radius: 50%;
+	font-size: 0%;
+	transition: background 0.5s;
+}
+.bouton_interet,.bouton_interet:visited,.bouton_interet:link
+{
+	position:fixed;
+	top:82.5%;
+	background-color:rgba(116,214,0,0.7);
+	right:5%;
+	width:15px;
+	height:15px;
+	border-radius: 50%;
+	font-size: 0%;
+	transition: background 0.5s;
+}
+.bouton_monparcours,.bouton_monparcours:visited,.bouton_monparcours:link
+{
+	position:fixed;
+	top:30%;
+	background-color:rgba(10,100,147,0.7);
+	right:5%;
+	width:15px;
+	height:15px;
+	border-radius: 50%;
+	font-size: 0%;
+	transition: background 0.5s;
+}
+.bouton_experience,.bouton_experience:visited,.bouton_experience:link
+{
+	position:fixed;
+	top:47.5%;
+	background-color:rgba(254,161,0,0.7);
+	right:5%;
+	width:15px;
+	height:15px;
+	border-radius: 50%;
+	font-size: 0%;
+	transition: background 0.5s;
+}
+.bouton_mesconnaissances,.bouton_mesconnaissances:visited,.bouton_mesconnaissances:link
+{
+	position:fixed;
+	top:65%;
+	background-color:rgba(255,7,58,0.7);
+	right:5%;
+	width:15px;
+	height:15px;
+	border-radius: 50%;
+	font-size: 0%;
+	transition: background 0.5s;
+}
+.bouton_intro:hover,.bouton_intro:active,.bouton_intro.encours,.bouton_interet:hover,.bouton_interet.encours,.bouton_interet:active,.bouton_interet:focus,.bouton_mesconnaissances.encours,.bouton_mesconnaissances:hover,.bouton_mesconnaissances:active,.bouton_mesconnaissances:focus,.bouton_experience:hover,.bouton_experience:active,.bouton_experience.encours,.bouton_experience:focus,.bouton_intro:focus,.bouton_monparcours:hover,.bouton_monparcours.encours,.bouton_monparcours:active,.bouton_monparcours:focus
+{
+	background-color:white;
+	text-decoration: none;
+	border:solid 1px grey;
+
+}
+}
