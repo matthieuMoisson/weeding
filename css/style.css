@@ -167,6 +167,10 @@ li
 {
 	padding:2%;
 }
+.contenu_parc
+{
+	padding:2%;
+}
 .image
 {
 	text-align:center;
@@ -175,6 +179,33 @@ li
     margin-right: auto;
     margin-bottom:20px;
 }
+.bouton_parc,.bouton_parc:visited,.bouton_parc:link
+{
+	display:inline-block;
+	background-color:#116493;
+	padding-top:2%;
+	padding-bottom:2%;
+	width:100%;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+	text-align: center;
+	color:white;
+	font-family: Segoe UI, sans-serif;
+	font-size:120%;
+	border-bottom:5px solid #06283a;
+	text-decoration: none;
+	transition: background 0.5s;
+	margin-top:10px;
+	margin-bottom:10px;
+}
+.bouton_parc:hover,.bouton_parc:active,.bouton_parc:focus,.bouton_parc.encours
+{
+	background-color:white;
+	display:inline-block;
+	color:#116493;
+	text-decoration: none;
+}
+
 .bouton_exp,.bouton_exp:visited,.bouton_exp:link
 {
 	display:inline-block;

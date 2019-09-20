@@ -14,6 +14,8 @@
     <script type='text/javascript'>
         $(document).ready(function() {
             $("#emplois").hide(1000);
+            $("#apporter").hide(1000);
+            $("#demandes").hide(1000);
             $("#projets").hide(1000);
             $("#stages").show(1000);
             $("#lang").hide(1000);
@@ -29,8 +31,12 @@
             $("#autre").hide(1000);
             $("#bouton_stages").addClass("encours");
             $("#bouton_intro").addClass("encours");
+            $("#bouton_planning").addClass("encours");
             $('html, body').animate({
                 scrollTop: $("#presentation").offset().top
+            }, 1000);
+            $('html, body').animate({
+                scrollTop: $("#monparcours").offset().top
             }, 1000);
         });
 
@@ -67,6 +73,17 @@
             $("#bouton_projets").removeClass("encours");
             $("#emplois").hide(1000);
             $("#bouton_emplois").removeClass("encours");
+            $("#" + bouton).show(1000);
+            $("#bouton_" + bouton).addClass("encours");
+        }
+
+        function monparcours(bouton) {
+            $("#planning").hide(1000);
+            $("#bouton_planning").removeClass("encours");
+            $("#apporter").hide(1000);
+            $("#bouton_apporter").removeClass("encours");
+            $("#demandes").hide(1000);
+            $("#bouton_demandes").removeClass("encours");
             $("#" + bouton).show(1000);
             $("#bouton_" + bouton).addClass("encours");
         }
@@ -118,7 +135,127 @@
     <div class="parcours">
         <div class="contenu" id="monparcours">
             <h1 class="c_parc">Présentation général</h1>
-            
+            <div class="row">
+                <div class="col-xs-4">
+                    <a href="javascript:monparcours('planning')" class="col-sm-4 bouton_parc" id="bouton_planning">
+						Planning
+					</a>
+                </div>
+                <div class="col-xs-4">
+                    <a href="javascript:monparcours('apporter')" class="col-sm-4 bouton_parc" id="bouton_apporter">
+						Ce que vous devez apporter
+					</a>
+                </div>
+                <div class="col-xs-4">
+                    <a href="javascript:monparcours('demandes')" class="col-sm-4 bouton_parc" id="bouton_demandes">
+						Surtout n'hésité pas !
+					</a>
+                </div>
+            </div>
+            <div class="contenu_parc" id="planning">
+                <h2 class="c_parc">Vendredi</h2>
+                <a href="https://www.lamartinette.com"><b style="color:#116493;">Rendez-vous dès le vendredi 08 mai au gite de la martinette à fond de france</b></a>
+                <p>
+                    Laissez les 10 places de parking devant le gite pour les personnes agées, et profiter de 200 metres pour savourer un bon bol d'aire frais arpès la route. Le deuxieme parking est situé à 200 metre en contrabas du gite. 
+                </p>
+                <p>
+                    Vous pouvez vous installer et profiter de la journée en réalisant l'activité de votre choix
+                </p>
+                <p>
+                    Pour les motivées, nous avons toujours besoin de main pour préparer la nouriturre, et finaliser l'installation de la salle pour le jour J
+                </p>
+                <p>
+                    Nous vous proposons de tous nous retrouver en fin de journée, pour préparer et manger tous ensemble un bon repas avant de nous reposer au gite
+                </p>
+                <h2 class="c_parc">Samedi</h2>
+                <a href="#"><b style="color:#116493;">Jour J</b></a>
+                <p>
+                    Reveille tout en douceur pour prendre des forces pour le reste de la journée
+                </p>
+                <p>
+                    Activité pour les plus motivé
+                </p>
+                <p>
+                    Ou bien préparatif et finalisation pour ce qui veule participer
+                </p>
+                <p>
+                    Retrouvons nous à midi pour grignoter un petit morceau pour patienter jusqu'au soir
+                </p>
+                <p>
+                    Rendez-vous à la mairie au plus tard à 16h !!!
+                </p>
+                <p>
+                    Avant un retour au gite pour le reste des festivitées :)
+                </p>
+                <h2 class="c_parc">Dimanche</h2>
+                <a href="http://www.les7laux.com/fr/il4-equipement_i209393-espace-aquatique-des-7-laux.aspx"><b style="color:#116493;">Dimanche jour du seigneur, faites ce qu'il vous plait</b></a>
+                <p>
+                    Retour à la vrai vie :)
+                </p>
+            </div>
+            <div class="contenu_exp" id="apporter">
+                <h2 class="c_parc">Materiels</h2>
+                <a href="http://www.les7laux.com/fr/il4-activite_i5302606-devalkart.aspx"></a>
+                <p>
+                    Draps ou duvet (il y a déjà des oreillers et des couettes de partout)
+                </p>
+                <p>
+                    Serviettes de toilette
+                </p>
+                <p>
+                    Chapeau de sorcier et accessoires rigolo (pour les photos)
+                </p>
+                <p>
+                    Eric, ton talent de pianniste, et pourquoi pas ton pianno? Nathalie, toutes les bonnes idées de chants pour accompgner les pianistes
+                </p>
+                <p>
+                    Chauffeur, si t'est champion, ta dauphine et son booster?
+                </p>
+                <p>
+                    Tout ce dont vous avez besoin pour vos activités et passé un bon weekend
+                </p>
+                <h2 class="c_parc">Autres</h2>
+                <a href="http://www.les7laux.com/fr/il4-activite_i4975416-wizluge.aspx"></a>
+                <p>
+                    Vous, votre bonne humeur, vos sourires, votre participation et vos annimations
+                </p>
+            </div>
+            <div class="contenu_exp" id="demandes">
+                    <h2 class="c_parc">Randonnées</h2>
+                    <a href="#"><b style="color:#116493;">C'est un mariage familiale et champêtre, alors chacun peut y trouver son rôle</b></a>
+                    <p>
+                        Pour l'annimation : nos témoins Claire et Nico
+                    </p>
+                    <p>
+                        Pour la logistique : MC et Philippe, Claire et Nico
+                    </p>
+                    <p>
+                        Pour les photo : Valentin et Jean Christophe
+                    </p>
+                    <p>
+                        Pour la liste de mariage : Sophie et Nicolas
+                    </p>
+                    <p>
+                        Le transport des mariés : Laurent
+                    </p>
+                    <p>
+                        La demoiselle d'honneur : Amélie
+                    </p>
+                    <p>
+                        La cuisine : Un peut tout le monde ! 
+                    </p>
+                    <p>
+                        La déco : Mémé, Mélanie, Claire, Marie-Christine, ... cette liste ne fait que grandir!
+                    </p>
+                    <p>
+                        L'installation : Les muscles des volontaires
+                    </p>
+                    <p>
+                        La bonne ambiance : tous vos bonnes idées
+                    </p>
+            </div>
+            <div class="row" style="margin-bottom:30px;">
+            </div>
         </div>
     </div>
     <div class="experience">
